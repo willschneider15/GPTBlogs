@@ -36,6 +36,10 @@ h3 {
   color: #202123;
   margin: 16px 0 40px;
 }
+.tool-title{
+  color: #10a37f;
+}
+
 form {
   display: flex;
   flex-direction: column;

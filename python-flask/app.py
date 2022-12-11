@@ -10,7 +10,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 @app.route("/", methods=("GET", "POST"))
 def index():
     if request.method == "POST":
-        animal = request.form["animal"]
+        animal = request.form["title"]
         response = openai.Completion.create(
             engine="text-davinci-003",
            
@@ -28,6 +28,6 @@ def index():
 
 
 def generate_prompt(animal):
-    return """Write a product comparison article for {} this article should be 2000-3000 words with multiple sections containing multiple paragraphs. Sections should compare pros and cons including prices, features, and customer experience.""".format(
+    return """Write a section for an article that includes 4-5 paragraphs that are 3-4 sentences long. This section {}.""".format(
         animal.capitalize()
     )
