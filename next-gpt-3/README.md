@@ -15,6 +15,7 @@ Then update the file name from .env.local.template to .env.local. Make sure to a
 OPENAI_API_KEY= <your api key>
 ```
 
+Then you can run the development locally.
 ```bash
 yarn dev
 ```
