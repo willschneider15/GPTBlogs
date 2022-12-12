@@ -5,11 +5,17 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies.
+```bash
+yarn install
+```
+
+Then update the file name from .env.local.template to .env.local. Make sure to also add you API key.
+```bash
+OPENAI_API_KEY= <your api key>
+```
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
