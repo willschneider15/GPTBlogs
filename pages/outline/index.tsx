@@ -5,11 +5,18 @@ import { useRouter } from 'next/router'
 const Outline: NextPage = () => {
   const [value, setValue] = React.useState<string>('');
   const [prompt, setPrompt] = React.useState<string>('');
-  const [completion, setCompletion] = React.useState<string>('');
+  const [completion, setCompletion] = React.useState<Object>();
   const [text, setText] = React.useState<string>('');
   const router = useRouter();
   const data = router.query;
   const title = data.id;
+
+  interface PostData {
+    title: string;
+    subtitle: string;
+    body: string;
+    image: string;
+  }
  
 useEffect(() => {
     const createOutline = async () => {
@@ -33,6 +40,18 @@ useEffect(() => {
 
       createOutline().catch(console.error)
 }, [])
+
+  function buttonSubmit() {
+
+    fetch("/api/createBlog", {
+      method: "POST",
+      body: JSON.stringify({title: title, body: completion}),
+    })   
+    .catch((err) => {
+      console.log(err);
+   
+    });
+  };
   
 
 //   const handleInput = React.useCallback(
@@ -63,7 +82,7 @@ useEffect(() => {
     <div className="h-screen flex flex-col m-auto justify-center items-center" >
       <h1 className='text-3xl pb-10'>Please edit your outline to your linking: </h1>
       <textarea id="body" className="textarea textarea-info w-9/12 h-4/6 mb-10" ></textarea>
-      <button className="btn glass h-12 px-6 m-2 text-lg text-indigo-100">Submit</button>
+      <button className="btn glass h-12 px-6 m-2 text-lg text-indigo-100" onClick={buttonSubmit}>Submit</button>
 
    
         <h3>NOTE: Include stats and numbers to further improve the final output.</h3>
