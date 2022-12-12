@@ -11,9 +11,9 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const completion = await openai.createCompletion({
-    model: 'text-davinci-002',
-    prompt: req.body.text,
-    temperature: 0.7,
+    model: 'text-davinci-003',
+    prompt: "Come up with six SEO optimized blog titles for"+req.body.text+"do not use quotes around each title.",
+    temperature: 0.5,
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
