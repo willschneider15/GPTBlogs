@@ -18,29 +18,30 @@ const Outline: NextPage = () => {
     image: string;
   }
  
-useEffect(() => {
-    const createOutline = async () => {
-        const body = document.getElementById("body");
-        console.log("body "+body)
-        console.log("title " +title)
-        if(title != "" && body!=null){
-            
-            const response = await fetch('/api/outline', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ text: title }),
-            });
-            const data = await response.json();
-            setCompletion(data.result.choices[0].text);
-            body.innerHTML=data.result.choices[0].text;
+  useEffect(() => {
+      const createOutline = async () => {
+          const body = document.getElementById("body");
+          console.log("body "+body)
+          console.log("title " +title)
+          if(title != "" && body!=null){
+              
+              const response = await fetch('/api/outline', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ text: title }),
+              });
+              const data = await response.json();
+              setCompletion(data.result.choices[0].text);
+              body.innerHTML=data.result.choices[0].text;
+          }
         }
-      }
 
-      createOutline().catch(console.error)
-}, [])
-
+        createOutline().catch(console.error)
+  }, [])
+  
+  //NOTE: This function is still in testing and is used to update the CMS
   function buttonSubmit() {
 
     fetch("/api/createBlog", {

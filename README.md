@@ -12,7 +12,10 @@ yarn install
 
 Then update the file name from .env.local.template to .env.local. Make sure to also add you API key.
 ```bash
-OPENAI_API_KEY= <your api key>
+OPENAI_API_KEY= <your-openai-api-key>
+NEXT_PUBLIC_SANITY_DATASET=production
+NEXT_PUBLIC_SANITY_PROJECT_ID=<your-sanity-id>
+SANITY_API_TOKEN=<your-sanity-api-token>
 ```
 
 Then you can run the development locally.
