@@ -80,13 +80,21 @@ const Outline: NextPage = () => {
 //     }, [value]);
 
   return (
-    <div className="h-screen flex flex-col m-auto justify-center items-center" >
-      <h1 className='text-3xl pb-10'>Please edit your outline to your linking: </h1>
-      <textarea id="body" className="textarea textarea-info w-9/12 h-4/6 mb-10" ></textarea>
-      <button className="btn glass h-12 px-6 m-2 text-lg text-indigo-100" onClick={buttonSubmit}>Submit</button>
+    <div className='flex flex-row'>
+      <div className="basis-1/2 h-screen flex flex-col m-auto justify-center items-center" >
+        <h1 className='text-3xl pb-10'>Please edit your outline to your linking: </h1>
+        <textarea id="body" className="textarea textarea-info w-9/12 h-4/6 mb-10" ></textarea>
+        <button className="btn glass h-12 px-6 m-2 text-lg text-indigo-100" onClick={buttonSubmit}>Generate Highlighted Section</button>
 
-   
-        <h3>NOTE: Include stats and numbers to further improve the final output.</h3>
+          <h3>NOTE: Include stats and numbers to further improve the final output.</h3>
+      </div>
+      <div className="basis-1/2 h-screen flex flex-col m-auto justify-center items-center" >
+        <h1 className='text-3xl pb-10'>Generated article: </h1>
+        <textarea id="body" className="textarea textarea-info w-9/12 h-4/6 mb-10" ></textarea>
+        <button className="btn glass h-12 px-6 m-2 text-lg text-indigo-100" onClick={buttonSubmit}>Publish</button>
+
+          <h3>NOTE: Publishes to Google Doc where you can share and do further editing.</h3>
+      </div>
     </div>
   );
 };

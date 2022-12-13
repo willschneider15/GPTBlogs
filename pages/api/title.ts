@@ -12,7 +12,7 @@ export default async function handler(
 ) {
   const completion = await openai.createCompletion({
     model: 'text-davinci-003',
-    prompt: "Come up with six SEO optimized blog titles for"+req.body.text+"do not use quotes around each title.",
+    prompt: "Come up with six SEO optimized blog titles for "+req.body.text+" make sure to use emotionally triggered headlines and at least one powerful word. Do not use quotes around each title.",
     temperature: 0.5,
     top_p: 1,
     frequency_penalty: 0,
