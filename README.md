@@ -4,7 +4,8 @@ Built for the OpenAI Hackathon
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Aim
-The aim is to create toolings that assist people get their blogs done with the help of GPT3(Generative Pre-trained Transformer 3).
+The aim is to create toolings that assist people get their blogs done with the help of GPT3(Generative Pre-trained Transformer 3),
+to make simple interfaces that make it easier for users to create good inputs which in turn will make better outputs
 
 ## Basic Walkthrough
 At First, you will need to type the input of-  
