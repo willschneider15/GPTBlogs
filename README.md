@@ -3,10 +3,10 @@ Built for the OpenAI Hackathon
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-#Aim
+## Aim
 The aim is to create toolings that assist people get their blogs done with the help of GPT3(Generative Pre-trained Transformer 3).
 
-#Basic Walkthrough
+## Basic Walkthrough
 At First, you will need to type the input of-  
 what the article is about.
 Then you can select the "Title" that catch your attention.
