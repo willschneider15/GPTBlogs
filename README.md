@@ -65,6 +65,9 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+## Help 
+If you find any issues and or would like to implement a feature feel free. There is a lot of room to create module components for features like keyword integration. Also, the openai models can be trained for specific content types to improve the end result.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
