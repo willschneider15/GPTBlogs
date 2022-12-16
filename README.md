@@ -9,6 +9,7 @@ At First, you will need to type the input of-
 what the article is about.
 Then you can select the "Title" that catch your attention.
 After which, you can select from dropdown to generate the outline.
+Finally, you will have your article generated.
 
 ## Getting Started
 
